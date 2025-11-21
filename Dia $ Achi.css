@@ -2,7 +2,7 @@
 * {
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Noto Sans', sans-serif;
+  /* font-family: 'Poppins', 'Noto Sans', sans-serif; */
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 .navbar-langauge {
   background-color: #f0f0f0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 2%;
   border-bottom: 1px solid #e0e0e0;
   position: sticky;
@@ -33,6 +33,7 @@ body {
   z-index: 99;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+  
 
 .menu {
   position: relative;
@@ -1485,4 +1486,3 @@ footer {
   font-size: 14px;
   color: #ccc;
 }
-

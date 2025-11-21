@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(139, 0, 0, 0.8);
+  background-color: rgba(139, 0, 0, 0.9);
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -18,17 +18,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 70px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
 }
-
-.logo {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+ .logo {
+  display: flex;
+  align-items: center;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -50,9 +46,8 @@ body {
 }
 /* Logo Image */
 .logo-img {
-  padding-top: 10px;
-  height: 70px;
-  width: auto;
+  height: 40px;
+  margin-right: 10px;
 }
 
 
@@ -311,5 +306,3 @@ button:hover {
     padding: 10px 20px;
   }
 }
-
-
