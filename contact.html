@@ -41,47 +41,36 @@
     <div class="container">
       <h2>📩 Connect with Bihar's Culture</h2>
       
-      <form id="feedbackForm">
+      <!-- UPDATED FORM WITH FORMSPREE -->
+      <form id="feedbackForm" action="https://formspree.io/f/xyzolzyj" method="POST">
         <label for="name">👤 Your Full Name</label>
         <input type="text" id="name" name="name" placeholder="E.g., Your Name" required />
+
         <label for="message">💬 Feedback or Message</label>
-        <textarea id="message" name="message" placeholder="Share your thoughts about Bihar's heritage, traditions, or any questions you might have..." required></textarea>
+        <textarea id="message" name="message" placeholder="Share your thoughts about Bihar's heritage..." required></textarea>
+
         <label for="rating">🌟 Rate Bihar's Culture</label>
-    <div class="star-rating">
-      
-        <input type="radio" name="rating" id="star5" value="5">
-        <label for="star5" title="5 stars">★</label>
-        <input type="radio" name="rating" id="star4" value="4">
-        <label for="star4" title="4 stars">★</label>
-        <input type="radio" name="rating" id="star3" value="3">
-        <label for="star3" title="3 stars">★</label>
-        <input type="radio" name="rating" id="star2" value="2">
-        <label for="star2" title="2 stars">★</label>
-        <input type="radio" name="rating" id="star1" value="1">
-        <label for="star1" title="1 star">★</label>
-   </div>
+        <div class="star-rating">
+            <input type="radio" name="rating" id="star5" value="5">
+            <label for="star5" title="5 stars">★</label>
+
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4" title="4 stars">★</label>
+
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3" title="3 stars">★</label>
+
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2" title="2 stars">★</label>
+
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
 
         <button type="submit">🌿 Send Message</button>
       </form>
 
-     <div id="feedbackList">
-      <div id="feedbackDisplay" class="feedback-item" style="display: none;"></div>
-
-     </div>  
-
-      <div class="map-section">
-        <h3>🗌️ Explore Bihar on the Map</h3>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57328.47019004219!2d85.07892469254156!3d25.59409402578805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed582f27f393f7%3A0x1fc155de1e5b399d!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1683965450234!5m2!1sen!2sin"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      <div class="footer">
-        Thank you for celebrating Bihar's soul with us — Madhubani, Mithila & beyond ✨
-      </div>
+      <div id="feedbackList"></div>
     </div>
   </div>
 
@@ -130,6 +119,7 @@
     </div>
   </footer>
 
- <script src="contact.js"></script>
+  <!-- UPDATED: CONTACT JS -->
+  <script src="contact.js"></script>
 </body>
 </html>

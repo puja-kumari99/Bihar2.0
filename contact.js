@@ -1,51 +1,70 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const feedbackForm = document.getElementById("feedbackForm");
-  const feedbackList = document.getElementById("feedbackList");
+/// Formspree form connected
+console.log("Form connected to Formspree successfully.");
 
-  feedbackForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent page reload
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
 
-    const name = document.getElementById("name").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (name && message) {
-      const feedbackItem = document.createElement("div");
-      feedbackItem.classList.add("feedback-item");
-      feedbackItem.innerHTML = `<strong>${name}:</strong> ${message}`;
-
-      feedbackList.appendChild(feedbackItem);
-
-      feedbackForm.reset(); // Clear the form
-    }
+  form.addEventListener("submit", function () {
+    alert("🎉 Thank you! Your feedback has been submitted successfully.");
+    
+    // Delay reset so Formspree gets the data first
+    setTimeout(() => {
+      form.reset();
+    }, 500);
   });
 });
 
 
 
-  const form = document.querySelector('form');
-  const feedbackDisplay = document.getElementById('feedbackDisplay');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-    const rating = document.querySelector('input[name="rating"]:checked');
 
-    if (name.trim() !== '' && message.trim() !== '' && rating) {
-      const stars = '★'.repeat(rating.value);
-      feedbackDisplay.innerHTML = `
-        <strong>👤 Name:</strong> ${name}<br>
-        <strong>💬 Feedback:</strong> ${message}<br>
-        <strong>🌟 Rating:</strong> ${stars}
-      `;
-      feedbackDisplay.style.display = 'block';
 
-      form.reset();
-    } else {
-      alert('Please fill your name, feedback, and give a rating.');
-    }
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Formspree form connected
+// console.log("Form connected to Formspree successfully.");
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.getElementById("feedbackForm");
+
+//   form.addEventListener("submit", function () {
+//     alert("🎉 Thank you! Your feedback has been submitted successfully.");
+
+//     // Clear Form Fields
+//     form.reset();
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -418,7 +418,7 @@ footer {
 
 .top-destinations {
   max-width: 1200px;
-  margin: 0 auto;  /* 👈 this centers the whole section */
+  margin: 0 auto;  
   padding: 50px 20px;
 }
 
