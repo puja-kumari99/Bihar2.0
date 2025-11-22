@@ -26,6 +26,19 @@ const questions = [
     }
   ];
   
+
+  window.addEventListener("load", function () {
+  let links = document.querySelectorAll(".nav-links li a");
+  let currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
   let currentQuestion = 0;
   let score = 0;
   let quizResults = [];

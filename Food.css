@@ -98,10 +98,17 @@ body {
     transition: color 0.3s, transform 0.3s;
   }
   
+.nav-links li a.active {
+  color: yellow !important;
+  font-weight: bold;
+}
+
   .nav-links li a:hover {
     color: #ffd700;
     transform: scale(1.1);
   }
+
+
   
   /* Mobile menu button */
   .menu-toggle {
@@ -482,48 +489,48 @@ body {
       margin-bottom: 20px;
     }
   }
-  
-  @media screen and (max-width: 480px) {
-    .navbar {
-      padding: 10px 15px;
-    }
-    
-    .logo img {
-      height: 50px;
-    }
-    
-    .content-box h2 {
-      font-size: 1.5rem;
-    }
-    
-    .ingredients {
-      font-size: 1.1rem;
-    }
-    
-    .desc {
-      font-size: 0.9rem;
-    }
-    
-    .about-bihar-food h2 {
-      font-size: 1.8rem;
-    }
-    
-    .about-bihar-food p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-    
-    .food-slider a {
-      width: 200px;
-      height: 140px;
-    }
-    
-    .food-slider img {
-      width: 200px;
-      height: 140px;
-    }
-    
-    .modal-content {
-      max-width: 95%;
-    }
+  /* ---------- PHONE VIEW ---------- */
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
+
+  /* Hide menu by default on phone */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  /* When menu opens, show list */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Menu button visible on phone */
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Hide menu button in desktop by default */
+  .logo img {
+    width: 120px; /* Optional: logo small on phone */
+  }
+}

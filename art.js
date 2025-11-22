@@ -1,3 +1,14 @@
+window.addEventListener("load", function () {
+  let links = document.querySelectorAll(".nav-links li a");
+  let currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
@@ -54,15 +65,14 @@ const cards = document.querySelectorAll('.destination-card');
     }
 
 
-   
-
-
+  document.addEventListener("DOMContentLoaded", function () {
     
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
+    // Toggle menu on click
+    toggleBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
 
-
-
-
-
-   
-  
+  });

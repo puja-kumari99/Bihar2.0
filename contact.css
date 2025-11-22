@@ -66,6 +66,12 @@ body {
   border-radius: 5px;
 }
 
+.nav-links li a.active {
+  color: yellow !important;
+  font-weight: bold;
+}
+
+
 .nav-links li a:hover {
   color: #ffd700;
   background-color: rgba(255, 255, 255, 0.1);
@@ -308,108 +314,36 @@ footer {
   animation: pulse 1.5s infinite;
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-  .container {
-    padding: 30px;
-  }
-}
+@media (max-width: 600px) {
 
-@media (max-width: 768px) {
-  .hamburger {
+  .navbar {
+    padding: 10px 15px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
 
   .nav-links {
+    display: none;
     flex-direction: column;
+    gap: 15px;
     position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: rgba(139, 0, 0, 0.95);
-    transform: translateY(-200%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 998;
-    text-align: center;
-    padding: 20px 0;
+    top: 55px;
+    right: 10px;
+    width: 75%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
   }
 
   .nav-links.active {
-    transform: translateY(0);
+    display: flex;
   }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links li a {
-    padding: 10px 0;
-    display: block;
-    width: 100%;
-  }
-
-  .container {
-    padding: 20px;
-    border-width: 10px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .footer-section {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-
-  .logo-text {
-    font-size: 1.4rem;
-  }
-
-  .container {
-    padding: 15px;
-    border-width: 8px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  label, input, textarea, button {
-    font-size: 0.95rem;
-  }
-
-  .footer-section {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-section {
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    grid-template-columns: repeat(1, 1fr);
+  .menu-toggle{
+    width: 100px;
+    position: absolute;
+    right:300px;
   }
 }

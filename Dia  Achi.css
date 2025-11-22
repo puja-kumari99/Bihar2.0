@@ -1,9 +1,57 @@
 /* Base Styles and Reset  for both */
 * {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Poppins', 'Noto Sans', sans-serif; */
 }
+body {
+  overflow-x: hidden; /* horizontal scroll remove karne ke liye */
+}
+img, video, iframe {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap; /* allows items to move to next line */
+  gap: 10px; /* spacing between items */
+}
+
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* hide by default */
+  }
+  
+  .nav-links.active {
+    display: flex; /* show when toggle clicked */
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 body {
   background-color: #fcfcfc;
@@ -562,6 +610,11 @@ button:hover {
     height: 35px;
   }
 }
+
+
+
+
+
 
 
 
